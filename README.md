@@ -9,19 +9,25 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-The script requires Python 3 and the `PyPDF2` module. You can install `PyPDF2` with pip:
+If running as a Python script, the script requires Python 3 and the `PyPDF2` module. You can install `PyPDF2` with pip:
 
 ``pip install PyPDF2``
 
+Alternatively, there is a readymade executable file for use on Windows 10 machines with this project's "dist" directory. It is standalone and has no dependencies, so you can put it on your PATH and run it as any other program.
+
 ### Usage
 
-To use the script, navigate to the directory containing the script and call the Python file from your command line, passing in the name of the PDF file you wish to modify as an argument:
+To use the script, call the Python file from your command line, passing in the name of the PDF file you wish to modify as an argument:
 
 ``python fixpdfview.py file_to_be_fixed.pdf``
 
-The script will modify the viewer preferences of the input PDF file to hide the toolbars, menubar, and window UI. It then checks to see if the PDF exists at the given path before modifying it. 
+To use the executable file, call the program from your command line, passing in the name of the pdf file as before:
 
-After the modifications, the script writes the changes to a new output PDF file with a name prefixed by `new_`, and deletes the original input file.
+``fixpdfview file_to_be_fixed.pdf``
+
+The script will modify the viewer preferences of the input PDF file to hide the toolbars, menubar, and window UI. It then checks to see if the PDF exists with the out\raw folder before modifying it. 
+
+After the modifications, the script writes the changes to a new output PDF file in the 'out' folder, and deletes the original input file.
 
 ## Error Handling
 
