@@ -2,6 +2,10 @@ import os
 import argparse
 import PyPDF2
 
+
+# This method sets the HideToolbar, HideMenubar, and HideWindowUI flags to true. 
+# It reads a PDF from S:\drawings\out\raw, copies it, writes the flags to the copy, and saves the copy to S:\drawings\out.
+# It then deletes the PDF that is left in S:\drawings\out\raw.
 def set_hide_toolbars_flags(input_pdf_path, output_pdf_path):
     # Open PDF file
     with open(input_pdf_path, 'rb') as file:
