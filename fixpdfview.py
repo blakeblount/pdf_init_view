@@ -40,8 +40,8 @@ def main():
     # The printpdf program will seen the raw PDF to "S:\drawings\out\raw", where the fixpdfview program will pick it up.
     # The fixpdfview program will drop its output to "S:\drawings\out", where the MovePDF program can run normally.
     args = parser.parse_args()
-    input_pdf_path = args.input_pdf_filename # f"S:\\drawings\\out\\raw\\{args.input_pdf_filename}"
-    output_pdf_path = f"new_{input_pdf_path}"# f"S:\\drawings\\out\\{args.input_pdf_filename}"
+    input_pdf_path = f"S:\\drawings\\out\\raw\\{args.input_pdf_filename}"
+    output_pdf_path = f"S:\\drawings\\out\\{args.input_pdf_filename}"
 
     # Check to ensure the PDF has actually been placed in "S:\drawings\out\raw" before attempting to set flags.
     if os.path.exists(input_pdf_path):
